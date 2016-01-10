@@ -107,7 +107,7 @@
                     
                   </ul>
                 </div>             
-
+                <div class="clearfix"></div>
                 <!-- Tab panes -->
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="step1">
