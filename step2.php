@@ -96,12 +96,12 @@
   <body>
     <div class="container" style="margin-top:20px;">
         <div class="row">
-            <form>
+          
               <div>
                 <div id="crumbs">
                   <ul class="col-sm-12">
-                    <li class="col-sm-3"><a href="index.php" class="active">Chuyến đi và tính phí</a></li>
-                    <li class="col-sm-3"><a href="step2.php">Thông tin người bảo hiểm</a></li>
+                    <li class="col-sm-3"><a href="index.php">Chuyến đi và tính phí</a></li>
+                    <li class="col-sm-3"><a href="step2.php"  class="active">Thông tin người bảo hiểm</a></li>
                     <li class="col-sm-3"><a href="step3.php">Đăng nhập hệ thống</a></li>
                     <li class="col-sm-3"><a href="step4.php">Xác nhận và thanh toán</a></li>
                     
@@ -111,22 +111,12 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="step1">
-                      <?php include "blocks/step1.php"; ?>
-
-                   
-                      <div class="col-md-6">
-                        <div class="panel panel-default">
-                          <?php include "blocks/quyen-loi-co-ban.php"; ?>                          
-                        </div>
-
-                      </div><!--col-md-6-->
-                      <?php include "blocks/hinh-thuc-thanh-toan.php"; ?>   
-                      
+                      <?php include "blocks/step2.php"; ?>                      
                   </div>                  
                 </div>
 
               </div>
-            </form>
+        
         </div>
     </div>
     <div>

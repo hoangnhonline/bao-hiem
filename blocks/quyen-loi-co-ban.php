@@ -1,6 +1,6 @@
-<table cellpadding="5" cellspacing="0" class="auto-style1">
+<table cellpadding="5" cellspacing="0" class="auto-style1 table">
                 <tbody><tr style="background-color: #ff6400">
-                    <td rowspan="2" style="width: 340px; color: #fff; font-weight: bold; text-align: center; border-right: 1px #ccc solid; border-top-left-radius: 7px; ">QUYỀN LỢI CƠ BẢN BẮT BUỘC
+                    <td rowspan="2" style="width: 340px; color: #fff; font-weight: bold; text-align: center; border-right: 1px #ccc solid; border-top-left-radius: 7px;    vertical-align: middle; ">QUYỀN LỢI CƠ BẢN BẮT BUỘC
                     </td>
                     <td colspan="3" style="color: #fff; font-weight: bold; text-align: center; border-bottom: 1px #ccc solid; border-top-right-radius: 7px; ">GIỚI HẠN (VNĐ)
                     </td>
