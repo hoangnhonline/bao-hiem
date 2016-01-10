@@ -27,13 +27,75 @@
     }
     </style>
   </head>
+  <style type="text/css">
+* {
+    box-sizing: border-box;
+}
+
+#progress {
+    padding: 0;
+    list-style-type: none;
+    font-family: arial;
+    font-size: 12px;
+    clear: both;
+    line-height: 1em;
+    margin: 0 -1px;
+    text-align: center;
+}
+
+#progress li {
+    float: left;
+    padding: 10px 30px 10px 40px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    width: 32%;
+    margin: 0 1px;
+}
+
+#progress li:before {
+    content: '';
+    border-left: 16px solid #fff;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+#progress li:after {
+    content: '';
+    border-left: 16px solid #333;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 20;
+}
+
+#progress li.active {
+    background: #555;
+}
+
+#progress li.active:after {
+    border-left-color: #555;
+}
+  </style>
   <body>
     <div class="container" style="margin-top:20px;">
         <div class="row">
+            <ul id="progress">
+                <li>Step 1</li>
+                <li class="active">Step 2</li>
+                <li>Step 3</li>
+            </ul>
             <form role="form">
               <div>
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav nav-tabs" role="tablist" id="progress">
                   <li role="presentation" class="active"><a href="#step-1" aria-controls="step-1" role="tab" data-toggle="tab">Bước 1: Chuyến đi và tính phí</a></li>
                   <li role="presentation"><a href="#step-2" aria-controls="step-2" role="tab" data-toggle="tab">Bước 2: Thông tin người bảo hiểm</a></li>
                   <li role="presentation"><a href="#step-3" aria-controls="step-3" role="tab" data-toggle="tab">Bước 3: Đăng nhập hệ thống</a></li>
