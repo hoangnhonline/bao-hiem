@@ -1,4 +1,4 @@
-<div class="col-md-6">
+<div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading">
         ♥ Tính phí bảo hiểm du lịch quốc tế
@@ -17,21 +17,27 @@
           </label>
         </div><!--col-md-12-->
       
-          <div class="col-md-6">
+          <div class="col-sm-3">
             <div class="form-group">
               <label>Ngày đi</label>
               <input class="form-control datepicker" name="date_from" id="date_from" />
             </div>
+            
+          </div><!--col-md-6-->
+          <div class="col-sm-3">
+              <div class="form-group">
+                <label>Ngày về</label>
+                <input class="form-control datepicker" name="date_to" id="date_to" />
+              </div>             
+          </div><!--col-md-6-->
+          <div class="col-sm-3">
             <div class="form-group">
               <label>Số ngày du lịch</label>
               <input class="form-control" name="no_date" />
             </div>
+            
           </div><!--col-md-6-->
-          <div class="col-md-6">
-              <div class="form-group">
-                <label>Ngày về</label>
-                <input class="form-control datepicker" name="date_to" id="date_to" />
-              </div>
+          <div class="col-sm-3">             
               <div class="form-group">
                 <label>Số người du lịch</label>
                 <input class="form-control" name="persons" id="persons" />

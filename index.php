@@ -8,92 +8,41 @@
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
-    <style type="text/css">
-    .tab-pane{padding: 5px}
-    .form-group{
-      margin-bottom: 5px !important;
-    }
-    label{
-      margin-bottom: 2px !important;  
-      font-weight: normal !important;      
-    }
-    #hinh-thuc{
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
-    #co-ban, #ca-nhan, #lua-chon{
-      margin-bottom: 15px;
-    }
-    .title {
-      
-      font-weight: bold !important
-    }
-    </style>
-      <style type="text/css">
-  #crumbs ul {
-    list-style: none;
-    display: inline-table;
-  }
-    #crumbs ul li {
-      display: inline;
-      padding: 2px;
-    }
-  
-    #crumbs ul li a {
-      display: block;
-      float: left;
-      text-align: center;
-      height: 40px;
-      background: #3498db;
-      position: relative;
-      margin: 0 10px 0 0; 
-      padding-top: 9px;      
-      font-size: 17px;
-      text-decoration: none;
-      color: #fff;
-          width: 100%;
-    }
-      #crumbs ul li a:after {
-        content: "";  
-        border-top: 20px solid transparent;
-        border-bottom: 20px solid transparent;
-          border-left: 20px solid #3498db;
-        position: absolute; right: -20px; top: 0;
-        z-index: 1;
-      }
-      
-      #crumbs ul li a:before {
-        content: "";  
-        border-top: 20px solid transparent;
-          border-bottom: 20px solid transparent;
-          border-left: 20px solid #FFF;
-        position: absolute; left: 0; top: 0;
-      }
-  
-        #crumbs ul li:first-child a {
-          border-top-left-radius: 10px; border-bottom-left-radius: 10px;    
-          padding-left: 15px;      
-        }
-        #crumbs ul li:first-child a:before {
-          display: none; 
-        }
-        
-        #crumbs ul li:last-child a {          
-          border-top-right-radius: 10px; border-bottom-right-radius: 10px;
-        }
-        #crumbs ul li:last-child a:after {
-          display: none; 
-        }
-      
-      #crumbs ul li a:hover, #crumbs ul li a.active {
-        background: #ff6400;
-      }
-        #crumbs ul li a:hover:after, #crumbs ul li a.active:after {
-          border-left-color: #ff6400;
-        }
-  </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <header id="header" class="fixed-width"><section id="menu-base">
+      <div class="main-top-menu">
+      <div class="container">
+      <div class="row">
+      <div class="col-md-12">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle icon-menu" href="#" data-toggle="dropdown">Menu</a>
+      <ul class="dropdown-menu main-nav">
+        <li><a href="/tra-ve-may-bay">Vé máy bay trực tuyến</a></li>
+        <li><a href="/dang-ki-visa-passport">Dịch vụ Visa - passport</a></li>
+        <li><a href="/dich-vu-dat-phong-khach-san/">Đặt phòng khách sạn</a></li>
+        <li><a href="http://www.worldtrans.vn/globalink/dich-vu-du-lich" target="_blank">Dịch vụ du lịch</a></li>
+        <li><a href="/dich-vu-bao-hiem-du-lich/">Bảo hiểm du lịch</a></li>
+      </ul>
+      </li>
+      </ul>
+      <div class="navbar-header"><a class="navbar-brand globalink-ticket" href="/">Globalink</a></div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>Quý khách vui lòng liên hệ với chúng tôi: (+84) 08 399 00 567 - 08 399 00 365</li>
+        <li><a class="gift" href="/">Quà tặng</a></li>
+        <li><a class="info-member" href="/">Thông tin thành viên</a></li>
+        <li><a class="login" href="/">Đăng nhập</a></li>
+      </ul>
+      </div>
+      </div>
+      <!-- /.navbar-collapse -->
+
+      </div>
+      <!-- /.container-fluid -->
+
+      </div>
+      </section></header>
     <div class="container" style="margin-top:20px;">
         <div class="row">
             <form>
@@ -114,12 +63,7 @@
                       <?php include "blocks/step1.php"; ?>
 
                    
-                      <div class="col-md-6">
-                        <div class="panel panel-default">
-                          <?php include "blocks/quyen-loi-co-ban.php"; ?>                          
-                        </div>
-
-                      </div><!--col-md-6-->
+                     
                       <?php include "blocks/hinh-thuc-thanh-toan.php"; ?>   
                       
                   </div>                  
