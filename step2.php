@@ -1,3 +1,8 @@
+<?php 
+session_start();
+var_dump($_SESSION['step1']);
+?>
+
 <!DOCTYPE html>
 <html>
   <head>

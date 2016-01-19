@@ -1,3 +1,4 @@
+<form id="formStep1" method="POST" action="process/cal.php">
 <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -20,27 +21,35 @@
           <div class="col-sm-3">
             <div class="form-group">
               <label>Ngày đi</label>
-              <input class="form-control datepicker" name="date_from" id="date_from" />
+              <input class="form-control datepicker" name="date_from" id="date_from" aria-required="true" required="required"
+              value="<?php if(isset($_SESSION['step1']['date_from'])) echo $_SESSION['step1']['date_from'];?>"
+              />
             </div>
             
           </div><!--col-md-6-->
           <div class="col-sm-3">
               <div class="form-group">
                 <label>Ngày về</label>
-                <input class="form-control datepicker" name="date_to" id="date_to" />
+                <input class="form-control datepicker" name="date_to" id="date_to" aria-required="true" required="required"
+                value="<?php if(isset($_SESSION['step1']['date_to'])) echo $_SESSION['step1']['date_to'];?>"
+                />
               </div>             
           </div><!--col-md-6-->
           <div class="col-sm-3">
             <div class="form-group">
               <label>Số ngày du lịch</label>
-              <input class="form-control" name="no_date" id="no_date"/>
+              <input class="form-control" name="no_date" id="no_date" aria-required="true" required="required" 
+              value="<?php if(isset($_SESSION['step1']['no_date'])) echo $_SESSION['step1']['no_date'];?>"
+              />
             </div>
             
           </div><!--col-md-6-->
           <div class="col-sm-3">             
               <div class="form-group">
                 <label>Số người du lịch</label>
-                <input class="form-control" name="persons" id="persons" />
+                <input class="form-control" name="persons" id="persons" aria-required="true" required="required" 
+              value="<?php if(isset($_SESSION['step1']['persons'])) echo $_SESSION['step1']['persons'];?>"
+                />
               </div>
           </div><!--col-md-6-->
           <div class="col-md-6" >
@@ -126,8 +135,8 @@
           </div>
           
             <div class="col-sm-10">
-              <h3 class="panel-title">Cách thức mua bảo hiểm</h3>
-              <ul>
+              <h3 class="panel-title" style="color: #ff6400;margin-bottom:15px;font-size:18px">Cách thức mua bảo hiểm</h3>
+              <ul id="cach-thuc-mua">
               <li class="col-sm-6">1. Trực tiếp lên website nhanh nhất - tiện nhất</li>
               <li class="col-sm-6">2. Gọi vào Hotline:0983.787.787 - 0987.520.520</li>
               <li class="col-sm-6">3. Qua chat:</li>
@@ -135,7 +144,7 @@
             </ul>
             </div>
             <div class="col-sm-2">
-              <button class="btn-primary btn btn-lg" id="btnXemphi">Xem phí</button>
+              <button type="submit" class="btn-primary btn btn-lg" id="btnXemphi">Xem phí</button>
             </div>
           
           </div>
@@ -147,4 +156,23 @@
       
       
     </div><!--col-md-12-->
-    
+
+</form>
+<!-- Modal -->
+<div class="modal fade" id="calFeeModal" tabindex="-1" role="dialog" aria-labelledby="calFeeModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="calFeeModalLabel">Phí bảo hiểm</h4>
+      </div>
+      <div class="modal-body" id="bodyCalFeeModal">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <a href="index.php?step=2" class="btn btn-primary">Tiếp tục</a>
+      </div>
+    </div>
+  </div>
+</div>

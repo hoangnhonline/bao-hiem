@@ -1,3 +1,31 @@
+<?php 
+session_start();
+$step = isset($_GET['step']) ? $_GET['step'] : 1;
+switch($step){
+  case 2:
+    if(!isset($_SESSION['step1'])){
+      header('location:index.php?step=1');
+    } 
+    break;
+  case 3 : 
+    if(!isset($_SESSION['customer_info']) || empty($_SESSION['customer_info'])){
+      header('location:index.php?step=2');
+    }
+    if(isset($_SESSION['users']) && !empty($_SESSION['users'])){
+      header('location:index.php?step=4');
+    }
+    break;
+  case 4 : 
+    if(!isset($_SESSION['users']) || empty($_SESSION['users'])){
+      header('location:index.php?step=3');
+    }
+
+    break;
+  default;
+    $step = 1;
+    break;
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,6 +37,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sweet.css">
   </head>
   <body>
     <header id="header" class="fixed-width"><section id="menu-base">
@@ -54,14 +83,14 @@
 
         <div class="row">
 
-            <form>
+            
               <div>
                 <div id="crumbs">
                   <ul class="col-sm-12">
-                    <li class="col-sm-3"><a href="index.php" class="active">Chuyến đi và tính phí</a></li>
-                    <li class="col-sm-3"><a href="step2.php">Thông tin người bảo hiểm</a></li>
-                    <li class="col-sm-3"><a href="step3.php">Đăng nhập hệ thống</a></li>
-                    <li class="col-sm-3"><a href="step4.php">Xác nhận và thanh toán</a></li>
+                    <li class="col-sm-3"><a href="index.php?step=1" <?php if($step==1){ ?>class="active" <?php } ?>>Chuyến đi và tính phí</a></li>
+                    <li class="col-sm-3"><a href="index.php?step=2" <?php if($step==2){ ?>class="active" <?php } ?>>Thông tin người bảo hiểm</a></li>
+                    <li class="col-sm-3"><a href="index.php?step=3" <?php if($step==3){ ?>class="active" <?php } ?>>Đăng nhập hệ thống</a></li>
+                    <li class="col-sm-3"><a href="index.php?step=4" <?php if($step==4){ ?>class="active" <?php } ?>>Xác nhận và thanh toán</a></li>
                     
                   </ul>
                 </div>             
@@ -69,13 +98,13 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="step1">
-                      <?php include "blocks/step1.php"; ?>                     
+                      <?php include "blocks/step".$step.".php"; ?>
                       
                   </div>                  
                 </div>
 
               </div>
-            </form>
+            
             <div class="col-sm-12">
       <h3 class="tt-module">Các tùy chọn khác</h3>
     </div>
@@ -92,10 +121,7 @@
       <div class="col-sm-3 tour-option"><a href="http://www.worldtrans.vn/globalink/dich-vu-du-lich" target="_blank">
         <img src="img/dich-vu-du-lich1.jpg" alt="" class="img-responsive"></a>
       <h2><a href="http://www.worldtrans.vn/globalink/dich-vu-du-lich" target="_blank">Dịch vụ du lịch</a></h2>
-      </div>
-      <div class="col-sm-3 hidden"><a href="/dich-vu-bao-hiem-du-lich/"><img src="img/bao-hiem.jpg" alt="" class="img-responsive"></a>
-      <h2><a href="/dich-vu-bao-hiem-du-lich/">Bảo hiểm du lịch</a></h2>
-      </div>
+      </div>     
     </div>
     <div class="col-sm-12" style="margin-top:20px">
     <h3 class="tt-module"><span style="font-family: 'times new roman', times, serif; font-size: 14pt;">BẢO HIỂM BLUECROSS - BẢO VỆ QUYỀN LỢI CỦA BẠN</span></h3>
@@ -242,44 +268,23 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">    
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="js/datepicker-vi.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/sweet.js"></script>
     <script src="js/date.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/strtotime.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $('#date_from').datepicker({
-         numberOfMonths: 3,
-         minDate: 0,
-         dateFormat : 'dd/mm/yy',
-         onSelect: function(date) {          
-        },         
-      });
-      $('#date_to').datepicker({
-        onSelect: function(date) {
-          var date1 = $('#date_from').val();
-            var date2 = $('#date_to').val();
-            var no_date = daydiff(parseDate($('#date_from').val()), parseDate($('#date_to').val()));
-            if(no_date > 0){
-              $('#no_date').val(no_date);
-            }else{
-              $('#no_date, #date_to').val();
-              alert('Vui lòng chọn ngày về lớn hơn ngày đi');
-            }
-        },
-        numberOfMonths: 3,
-         minDate: 0,
-         dateFormat : 'dd/mm/yy' 
-      });
-    });  
-    
-    function parseDate(str) {
-        var mdy = str.split('/')
-        return new Date(mdy[2],mdy[1], mdy[0]-1);
-    }
-
-function daydiff(first, second) {
-    return (second-first)/(1000*60*60*24)
-}
-
-    </script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.birthday').datepicker({              
+       dateFormat : 'mm/dd/yy',
+        changeMonth: true,
+        changeYear: true,        
+        yearRange: '<?php echo date("Y") - 76; ?>:<?php echo date("Y") - 19; ?>',
+        minDate: new Date(<?php echo date("Y") - 76; ?>, 01, 01),
+        defaultDate: '01/01/1980'
+    });   
+  });
+  </script>
   </body>
 </html>

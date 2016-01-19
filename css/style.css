@@ -594,3 +594,19 @@ h3.tt-module:after {
 .ico_idr {background-position:-30px -870px;}
 .ico_sgd {background-position:-60px -870px;}
 .ico_thb {background-position:-90px -870px;}
+#cach-thuc-mua li{list-style: none;margin-bottom: 10px}
+#cach-thuc-mua {clear: both}
+label.error{color:red; font-style: italic;}
+td.value{
+  font-weight: bold;
+  font-size: 16px;
+  text-align: right;  
+}
+label.errors{display:none;color:red; font-style: italic;}
+label.required{color:red; font-style: italic;}
+#formDK label {
+  font-weight: bold !important;
+}
+#formDK div.form-group{
+  margin-bottom: 10px !important;
+}
