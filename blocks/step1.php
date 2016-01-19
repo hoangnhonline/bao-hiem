@@ -33,7 +33,7 @@
           <div class="col-sm-3">
             <div class="form-group">
               <label>Số ngày du lịch</label>
-              <input class="form-control" name="no_date" />
+              <input class="form-control" name="no_date" id="no_date"/>
             </div>
             
           </div><!--col-md-6-->

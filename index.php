@@ -119,17 +119,12 @@
       <div style="width: 300px; float: right;">
 
       <!--Email subcriber-->
-      <div class="aign-up-mail"><script src="/wp-content/plugins/email-subscribers/widget/es-widget-page.js" type="text/javascript"></script>
+      <div class="aign-up-mail">
 
       <div class="es_msg"></div>
 
       <input id="es_txt_name_pg" class="es_textbox_class" style="display: none;" maxlength="225" name="es_txt_name_pg" type="text" value=""> <input id="es_txt_email_pg" class="es_textbox_class" maxlength="225" name="es_txt_email_pg" type="text" value=""> <input id="es_txt_button_pg" class="es_textbox_button" name="es_txt_button_pg" type="button" value="Đăng ký"> <input id="es_txt_group_pg" name="es_txt_group_pg" type="hidden" value="Public">
       </div>
-
-      <script>// <![CDATA[
-      function doSubscriptionEmail(){ es_submit_pages('http://globalink.vn'); }
-      // ]]&gt;</script>
-      <!--End Email subcriber-->
 
       </div>
       </div>
@@ -138,7 +133,7 @@
       <span class="txt-cong-dong" style="font-size: 14px;">Cộng đồng</span>
       <ul>
         <li style="padding-top: 15px;">
-      <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Facebook Cross Domain Communication Frame" aria-hidden="true" tabindex="-1" id="fb_xdm_frame_http" src="http://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2c14cdfb&amp;origin=http%3A%2F%2Fglobalink.vn" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Facebook Cross Domain Communication Frame" aria-hidden="true" tabindex="-1" id="fb_xdm_frame_https" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2c14cdfb&amp;origin=http%3A%2F%2Fglobalink.vn" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+      <!--<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Facebook Cross Domain Communication Frame" aria-hidden="true" tabindex="-1" id="fb_xdm_frame_http" src="http://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2c14cdfb&amp;origin=http%3A%2F%2Fbaohiem.dev" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Facebook Cross Domain Communication Frame" aria-hidden="true" tabindex="-1" id="fb_xdm_frame_https" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2c14cdfb&amp;origin=http%3A%2F%2Fglobalink.vn" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>-->
       <script>// <![CDATA[
       (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -148,12 +143,12 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
       // ]]&gt;</script>
-      <div class="fb-like fb_iframe_widget" style="overflow: hidden;" data-href="https://www.facebook.com/Globalink-Travel-1514350022209151/" data-layout="button_count" data-action="like" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2FGlobalink-Travel-1514350022209151%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true"><span style="vertical-align: bottom; width: 130px; height: 20px;"><iframe name="f18f817104" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.5/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df2161c4dac%26domain%3Dglobalink.vn%26origin%3Dhttp%253A%252F%252Fglobalink.vn%252Ff2c14cdfb%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2FGlobalink-Travel-1514350022209151%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true" style="border: none; visibility: visible; width: 130px; height: 20px;" class=""></iframe></span></div></li>
+      <!--<div class="fb-like fb_iframe_widget" style="overflow: hidden;" data-href="https://www.facebook.com/Globalink-Travel-1514350022209151/" data-layout="button_count" data-action="like" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2FGlobalink-Travel-1514350022209151%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true"><span style="vertical-align: bottom; width: 130px; height: 20px;"><iframe name="f18f817104" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.5/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df2161c4dac%26domain%3Dglobalink.vn%26origin%3Dhttp%253A%252F%252Fglobalink.vn%252Ff2c14cdfb%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2FGlobalink-Travel-1514350022209151%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true" style="border: none; visibility: visible; width: 130px; height: 20px;" class=""></iframe></span></div></li>
         <li><a class="icon-fb" title="" href="https://www.facebook.com/Globalink-Travel-1514350022209151/" target="_blank">Facebook</a></li>
         <li><a class="icon-tt" title="">Twitter</a></li>
         <li><a class="icon-gg" title="">Google Plus</a></li>
       </ul>
-      </div>
+      </div>-->
       </div>
 </div>
 
@@ -247,14 +242,44 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">    
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="js/datepicker-vi.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/strtotime.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-      $('.datepicker').datepicker({
+      $('#date_from').datepicker({
          numberOfMonths: 3,
          minDate: 0,
-         dateFormat : 'dd/mm/yy'         
+         dateFormat : 'dd/mm/yy',
+         onSelect: function(date) {          
+        },         
       });
-    });
+      $('#date_to').datepicker({
+        onSelect: function(date) {
+          var date1 = $('#date_from').val();
+            var date2 = $('#date_to').val();
+            var no_date = daydiff(parseDate($('#date_from').val()), parseDate($('#date_to').val()));
+            if(no_date > 0){
+              $('#no_date').val(no_date);
+            }else{
+              $('#no_date, #date_to').val();
+              alert('Vui lòng chọn ngày về lớn hơn ngày đi');
+            }
+        },
+        numberOfMonths: 3,
+         minDate: 0,
+         dateFormat : 'dd/mm/yy' 
+      });
+    });  
+    
+    function parseDate(str) {
+        var mdy = str.split('/')
+        return new Date(mdy[2],mdy[1], mdy[0]-1);
+    }
+
+function daydiff(first, second) {
+    return (second-first)/(1000*60*60*24)
+}
+
     </script>
   </body>
 </html>
