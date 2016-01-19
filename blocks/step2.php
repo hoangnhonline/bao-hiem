@@ -1,8 +1,3 @@
-<?php 
-echo "<pre>";
-print_r($_SESSION['customer_info']);
-echo "</pre>";
-?>
 <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading">

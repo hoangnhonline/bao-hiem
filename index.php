@@ -1,5 +1,6 @@
 <?php 
 session_start();
+//$_SESSION['step1'] = array();
 $step = isset($_GET['step']) ? $_GET['step'] : 1;
 switch($step){
   case 2:
@@ -263,6 +264,25 @@ switch($step){
     </div>
     <div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="calFeeModal" tabindex="-1" role="dialog" aria-labelledby="calFeeModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="calFeeModalLabel">Phí bảo hiểm</h4>
+      </div>
+      <div class="modal-body" id="bodyCalFeeModal">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <a href="index.php?step=2" class="btn btn-primary">Tiếp tục</a>
+      </div>
+    </div>
+  </div>
+</div>
+
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js" ></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">    

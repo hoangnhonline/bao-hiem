@@ -63,7 +63,7 @@ if(isset($_SESSION['step1'])){
 		$arrData['total_price'] = $list['total_price'];
 		$arrData['unit_price'] = $list['unit_price'];
 		$_SESSION['step1'] = $arrData;
-
+/*
 	echo '<pre>';
 	echo 'error message: ' . $list['error']."<br/>";
 	
@@ -84,7 +84,7 @@ if(isset($_SESSION['step1'])){
 	if ($err) {
 		echo '<h2>Error Found While Connecting</h2><pre>' . $err . '</pre>\n';
 	}
-	
+*/	
 ?>
 <table class="table table-bordered">	
 	<tr>

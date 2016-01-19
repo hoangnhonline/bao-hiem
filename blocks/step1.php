@@ -158,21 +158,3 @@
     </div><!--col-md-12-->
 
 </form>
-<!-- Modal -->
-<div class="modal fade" id="calFeeModal" tabindex="-1" role="dialog" aria-labelledby="calFeeModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="calFeeModalLabel">Phí bảo hiểm</h4>
-      </div>
-      <div class="modal-body" id="bodyCalFeeModal">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <a href="index.php?step=2" class="btn btn-primary">Tiếp tục</a>
-      </div>
-    </div>
-  </div>
-</div>

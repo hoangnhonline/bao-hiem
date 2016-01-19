@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#formStep1").validate({});
+	$("#formStep1").validate();
 	
     $('#formStep1').ajaxForm({
         beforeSend: function() {                
@@ -8,24 +8,9 @@ $(document).ready(function(){
                    
         },
         dataType : 'html',
-        complete: function(data) {  
-          console.log(data);
+        complete: function(data) {            
           $('#bodyCalFeeModal').html(data.responseText);
           $('#calFeeModal').modal('show');
-        	/*
-        	if($.trim(data.responseText)=='ok'){
-        		swal({   title: "Cập nhật thành công!",   
-        			text: "Vui lòng đăng nhập lại với mật khẩu mới.",   
-        			type: "success",        			  
-        			confirmButtonText: "OK",  
-        			 closeOnConfirm: false }, 
-        			 function(){   
-        				location.href='dang-ky.html';		
-        			});
-        	}else{    
-           		swal('Error','Mật khẩu cũ không đúng.','error');
-       		}
-          */
         }
     }); 
     $("#formDK").validate({
@@ -62,7 +47,7 @@ $(document).ready(function(){
       
         }
     }); 
-    $('#formStep1').ajaxForm({
+  $('#formPayment').ajaxForm({
         beforeSend: function() {                
         },
         uploadProgress: function(event, position, total, percentComplete) {
@@ -70,10 +55,22 @@ $(document).ready(function(){
         },
         dataType : 'html',
         complete: function(data) {  
-          console.log(data);
+          if($.trim(data.responseText)=='ok'){
+            swal({   title: "Đơn hàng đã được ghi nhận",   
+              text: "Cảm ơn quý khách, chúng tôi sẽ liên hệ lại quý khách để hoàn tất đơn hàng.",   
+              type: "success",                
+              confirmButtonText: "OK",  
+               closeOnConfirm: false }, 
+               function(){   
+                location.href='index.php';   
+              });
+          }else{    
+              swal('Error','Có lỗi xảy ra.','error');
+          }
       
         }
     }); 
+    
   
     $('#customerInfoForm').ajaxForm({
         beforeSend: function() {                
