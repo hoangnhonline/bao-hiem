@@ -113,7 +113,7 @@
 .navbar-nav>li>a.icon-menu {
     font-size: 0;
   position: relative;
-  background:url(../img/nav.png) no-repeat left center;
+  background:url(../img/icon/nav.png) no-repeat left center;
   width: 40px;
 }
 .navbar-nav>li>a.icon-menu:focus {
@@ -382,7 +382,7 @@ display: inline-table;
   float: left;
   text-align: center;
   height: 40px;
-  background: #3498db;
+  background: #14697e;
   position: relative;
   margin: 0 10px 0 0; 
   padding-top: 9px;      
@@ -395,7 +395,7 @@ display: inline-table;
     content: "";  
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-      border-left: 20px solid #3498db;
+      border-left: 20px solid #14697e;
     position: absolute; right: -20px; top: 0;
     z-index: 1;
   }
@@ -527,7 +527,7 @@ h3.tt-module:after {
     padding: 0;
   }
   .footer_box .seo_box ul.about-us {
-    list-style:url(images/icon/list-ft.png);
+    list-style:url(../img/icon/list-ft.png);
     margin-left: 15px;
   }
   .footer_box .seo_box ul li {
@@ -549,13 +549,13 @@ h3.tt-module:after {
     padding:0;
   }
   .footer_box .seo_box .social-network ul li .icon-fb {
-    background:url(images/icon/fb.png) no-repeat center center;
+    background:url(../img/icon/fb.png) no-repeat center center;
   }
   .footer_box .seo_box .social-network ul li .icon-tt {
-    background:url(images/icon/tt.png) no-repeat center center;
+    background:url(../img/icon/tt.png) no-repeat center center;
   }
   .footer_box .seo_box .social-network ul li .icon-gg {
-    background:url(images/icon/gg.png) no-repeat center center;
+    background:url(../img/icon/gg.png) no-repeat center center;
   }
   .footer_box .seo_box .social-network ul li a {
     font-size: 0;
@@ -573,7 +573,7 @@ h3.tt-module:after {
 .copyright .language_list a {color:#4b4b4b;}
 .copyright .language_list .icon {margin:0 15px 0 5px; width: 19px;}
 .ico_cn, .ico_en, .ico_jp, .ico_kr, .ico_fr, .ico_de, .ico_es, .ico_ru, .ico_vn, .ico_hk, .ico_tw, .ico_mac, .ico_sg, .ico_my, .ico_th, .ico_uk, .ico_sgd, .ico_idr, .ico_myr, .ico_thb {width: 19px;height: 13px;}
-.ico_tw, .ico_mac, .ico_sg, .ico_my, .ico_th, .ico_uk {background:url(images/icon_flag.png) no-repeat 0 0;}
+.ico_tw, .ico_mac, .ico_sg, .ico_my, .ico_th, .ico_uk {background:url(../img/icon_flag.png) no-repeat 0 0;}
 .ico_cn {background-position:0 -64px;}
 .ico_en {background-position:-32px -64px;}
 .ico_jp {background-position:-64px -64px;}

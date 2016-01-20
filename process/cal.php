@@ -63,6 +63,7 @@ if(isset($_SESSION['step1'])){
 		$arrData['total_price'] = $list['total_price'];
 		$arrData['unit_price'] = $list['unit_price'];
 		$_SESSION['step1'] = $arrData;
+		
 /*
 	echo '<pre>';
 	echo 'error message: ' . $list['error']."<br/>";
@@ -89,39 +90,64 @@ if(isset($_SESSION['step1'])){
 <table class="table table-bordered">	
 	<tr>
 		<th width="200px">Khu vực</th>
-		<td class="value"></td>
+		<td class="value">
+			<?php 
+			if($arrData['area'] == 'W') echo 'Toàn cầu';
+			if($arrData['area'] == 'A') echo 'Châu Á';
+			if($arrData['area'] == 'E') echo 'Đông Nam Á';
+			?>
+		</td>
 	</tr>
 	<tr>
 		<th>Ngày đi</th>
-		<td class="value"></td>
+		<td class="value">
+			<?php 
+			echo date('d-m-Y', strtotime($arrData['date_from']));
+			?>
+		</td>
 	</tr>
 	<tr>
 		<th>Ngày về</th>
-		<td class="value"></td>
+		<td class="value">
+			<?php 
+			echo date('d-m-Y', strtotime($arrData['date_to']));
+			?>
+		</td>
 	</tr>
 	<tr>
 		<th>Số ngày</th>
-		<td class="value"></td>
+		<td class="value"><?php echo $arrData['no_date']; ?></td>
 	</tr>
 	<tr>
 		<th>Số người</th>
-		<td class="value"></td>
+		<td class="value"><?php echo $arrData['persons']; ?></td>
 	</tr>
 	<tr>
 		<th>Hình thức du lịch</th>
-		<td class="value"></td>
+		<td class="value">
+			<?php if($type=="Individual") echo "Cá nhân" ; else  echo "Gia đình"; ?>
+		</td>
 	</tr>
 	<tr>
 		<th>Chi phí y tế</th>
-		<td class="value"></td>
+		<td class="value">
+			Hạng <?php echo $arrData['medical_plan']; ?>
+		</td>
 	</tr>
 	<tr>
 		<th>Tai nạn cá nhân</th>
-		<td class="value"></td>
+		<td class="value">
+			<?php if($arrData['personal_accident'] == 1) echo '400 triệu VND'; ?>
+			<?php if($arrData['personal_accident'] == 2) echo '1 tỷ VND'; ?>
+			<?php if($arrData['personal_accident'] == 3) echo '2 tỷ VND'; ?>
+			<?php if($arrData['personal_accident'] == 4) echo '5 tỷ VND'; ?>
+		</td>
 	</tr>
 	<tr>
 		<th>Bảo hiểm sự cố bất ngờ</th>
-		<td class="value"></td>
+		<td class="value">
+			<?php if($arrData['incidental_plan'] == 1) echo "Có" ; else echo "Không"; ?>
+		</td>
 	</tr>
 	<tr>
 		<th>Tổng chi phí</th>
