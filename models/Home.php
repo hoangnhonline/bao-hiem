@@ -10,8 +10,8 @@ class Home {
             mysql_connect('localhost', 'root', '') or die("Can't connect to server");
                mysql_select_db('baohiem') or die("Can't connect database");
         }else{
-			mysql_connect('localhost', 'lkt_art', 'TSel$D6]Uou5') or die("Can't connect to server");
-			mysql_select_db('lkt_art') or die("Can't connect database");  
+			mysql_connect('mysql.onehost.vn', 'thietken_baohiem', 'baohiem!@#') or die("Can't connect to server");
+			mysql_select_db('thietken_baohiem') or die("Can't connect database");  
         }
         mysql_query("SET NAMES 'utf8'") or die(mysql_error());
     }
