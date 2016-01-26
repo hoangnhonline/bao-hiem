@@ -43,7 +43,7 @@ $(document).ready(function(){
         },
         dataType : 'html',
         complete: function(data) {  
-          console.log(data);
+	location.href='index.php?step=4'; 
       
         }
     }); 

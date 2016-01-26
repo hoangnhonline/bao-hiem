@@ -5,16 +5,16 @@
         ♥ Tính phí bảo hiểm du lịch quốc tế
       </div>
       <div class="panel-body">
-        <div class="col-md-12">
+        <div class="col-md-12" style="margin-bottom:15px">
           <label class="title">Khu vực:</label>
           <label class="radio-inline">
-            <input type="radio" name="area" value="W" checked>Toàn cầu
+            <input type="radio" name="area" value="W" checked data-toggle="modal" data-target="#toancauModal">Toàn cầu
           </label>
           <label class="radio-inline">
-            <input type="radio" name="area" value="A">Châu Á
+            <input type="radio" name="area" value="A" data-toggle="modal" data-target="#chauaModal">Châu Á
           </label>
           <label class="radio-inline">
-            <input type="radio" name="area" value="E">Đông Nam Á
+            <input type="radio" name="area" value="E" data-toggle="modal" data-target="#dongnamaModal">Đông Nam Á
           </label>
         </div><!--col-md-12-->
       
@@ -63,19 +63,19 @@
               </label>          
             </div>
             <div id="lua-chon">
-            <p class="title">Quyền lợi bảo hiểm lựa chọn:<span>(Xem chi tiết)</span></p>
+            <p class="title">Quyền lợi bảo hiểm lựa chọn:<span style="cursor:pointer" data-toggle="modal" data-target="#luachonModal">(Xem chi tiết)</span></p>
             <div class="col-md-6">
             <label class="title">-  Bảo hiểm sự cố bất ngờ:</label>
             </div>
             <div class="col-md-6">
               <div class="col-md-6">
               <label class="radio-inline">
-                <input type="radio" name="incidental_plan" value="1" checked>Có
+                <input type="radio" name="incidental_plan" value="0" checked>Không
               </label>
               </div>
               <div class="col-md-6">
               <label class="radio-inline">
-                <input type="radio" name="incidental_plan" value="0">Không
+                <input type="radio" name="incidental_plan" value="1">Có
               </label>
               </div>                                 
             </div>
@@ -85,7 +85,7 @@
           </div>
           <div class="col-md-6">                      
             <div class="col-md-12" id="co-ban">
-              <p class="title">Quyền lợi bảo hiểm cơ bản bắt buộc: <span>(Xem chi tiết)</span></p>
+              <p class="title">Quyền lợi bảo hiểm cơ bản bắt buộc: <span style="cursor:pointer" data-toggle="modal" data-target="#cobanModal">(Xem chi tiết)</span></p>
               <div class="col-md-4">
               <label class="title">1. Chi phí y tế:</label>
               </div>
@@ -135,16 +135,14 @@
           </div>
           
             <div class="col-sm-10">
-              <h3 class="panel-title" style="color: #ff6400;margin-bottom:15px;font-size:18px">Cách thức mua bảo hiểm</h3>
+              <h3 class="panel-title" style="color: #ff6400;margin-bottom:15px;font-size:18px">Cách thức mua bảo hiểm du lịch</h3>
               <ul id="cach-thuc-mua">
-              <li class="col-sm-6">1. Trực tiếp lên website nhanh nhất - tiện nhất</li>
-              <li class="col-sm-6">2. Gọi vào Hotline:0983.787.787 - 0987.520.520</li>
-              <li class="col-sm-6">3. Qua chat:</li>
-              <li class="col-sm-6">4. Đến trực tiếp đại lý Én Việt trên toàn quốc</li>
+              <li class="col-sm-12">Đăng ký mua trực tiếp trên website</li>
+              <li class="col-sm-12">Liên hệ nhân viên phòng vé Globalink.vn</li>              
             </ul>
             </div>
             <div class="col-sm-2">
-              <button type="submit" class="btn-primary btn btn-lg" id="btnXemphi">Xem phí</button>
+              <button type="submit" class="btn-primary btn btn-lg" id="btnXemphi">Xem phí bảo hiểm</button>
             </div>
           
           </div>
