@@ -72,6 +72,34 @@ $(document).ready(function(){
       
         }
     }); 
+  $('#formLogin').ajaxForm({
+        beforeSend: function() {                
+        },
+        uploadProgress: function(event, position, total, percentComplete) {
+                   
+        },
+        dataType : 'json',
+        complete: function(data) {
+          if(data.responseText == ""){
+            location.href='index.php?step=3';
+          }else{
+            $('#span_error_login').html(data.responseText);
+          }
+      
+        }
+    });
+   $("#formLogin").validate({
+      rules: {
+        email_login: {
+          required: true,
+          email: true
+        },
+        password_login: {          
+          required : true
+        }            
+      }
+  
+    });
   $('#formPayment').ajaxForm({
         beforeSend: function() {                
         },
@@ -105,23 +133,7 @@ $(document).ready(function(){
         },
         dataType : 'html',
         complete: function(data) {  
-          location.href="index.php?step=3";
-         // $('#bodyCalFeeModal').html(data.responseText);
-          //$('#calFeeModal').modal('show');
-          /*
-          if($.trim(data.responseText)=='ok'){
-            swal({   title: "Cập nhật thành công!",   
-              text: "Vui lòng đăng nhập lại với mật khẩu mới.",   
-              type: "success",                
-              confirmButtonText: "OK",  
-               closeOnConfirm: false }, 
-               function(){   
-                location.href='dang-ky.html';   
-              });
-          }else{    
-              swal('Error','Mật khẩu cũ không đúng.','error');
-          }
-          */
+          location.href="index.php?step=3";        
         }
     }); 
 });

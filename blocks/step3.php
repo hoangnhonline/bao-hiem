@@ -11,17 +11,20 @@
               <h3 class="panel-title">Thành viên cũ</h3>
             </div>
             <div class="panel-body">
+              <form id="formLogin" name="formLogin" method="POST" action="process/login.php">
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label for="username">Tên đăng nhập</label>
-                  <input class="form-control" name="username">
+                  <label for="username">Email</label>
+                  <input class="form-control" name="email" id="email_login">
                 </div>
                 <div class="form-group">
                   <label for="password">Mật khẩu</label>
-                  <input class="form-control" name="password">
+                  <input class="form-control" type="password" name="password" id="password_login">
                 </div>
-                <button class="btn" style="background-color:#ff6400;color:#FFF;float:right">Đăng nhập</button>
+                <button class="btn" type="submit" style="background-color:#ff6400;color:#FFF;float:right">Đăng nhập</button>
+                <span class="error" id="span_error_login"></span>
               </div>
+              </form>
             </div>
           </div>
           
@@ -118,7 +121,7 @@
       </form>
         </div>
         <div id="vanglai" style="display:none">
-          <form id="formVL" name="formVL" method="POST" action="process/vanglai.php">
+          <form id="formVL" name="formVL" method="POST" action="process/register.php">
           <div class="col-sm-8">
           <div class="panel panel-default">
             <div class="panel-heading" style="background-color:#f7f7f9;color:#000">

@@ -7,7 +7,7 @@ class Home {
 
     function __construct() {
         if($_SERVER['SERVER_NAME']=='baohiem.dev'){
-            mysql_connect('localhost', 'root', 'root') or die("Can't connect to server");
+            mysql_connect('localhost', 'root', '') or die("Can't connect to server");
                mysql_select_db('baohiem') or die("Can't connect database");
         }else{
 			mysql_connect('mysql.onehost.vn', 'thietken_baohiem', 'baohiem!@#') or die("Can't connect to server");
@@ -22,7 +22,20 @@ class Home {
         }
         return $str;
     }
-    
+    function login($email, $password){
+        $arrReturn = array();
+        $password  = md5($password);
+        $sql = "SELECT email, phone, birthday, fullname, cmnd, company_name, company_address, tax_no
+                FROM users WHERE email = '$email' AND password = '$password' ";
+        $rs = mysql_query($sql);
+        $no_row = mysql_num_rows($rs);
+        
+        if($no_row > 0){
+            $arrReturn = mysql_fetch_assoc($rs);
+        }
+        
+        return $arrReturn;
+    }
     function changeTitle($str) {
         $str = $this->stripUnicode($str);
         $str = str_replace("?", "", $str);
