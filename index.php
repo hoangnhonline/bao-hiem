@@ -11,9 +11,9 @@ switch($step){
   case 3 : 
     if(!isset($_SESSION['customer_info']) || empty($_SESSION['customer_info'])){
       header('location:index.php?step=2');
-    }
-    if(isset($_SESSION['users']) && !empty($_SESSION['users'])){
-      header('location:index.php?step=4');
+    }    
+    if(isset($_SESSION['users']) && !empty($_SESSION['users'])){      
+      $is_login = true;
     }
     break;
   case 4 : 
@@ -39,6 +39,8 @@ switch($step){
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sweet.css">
+    <link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header id="header" class="fixed-width"><section id="menu-base">
@@ -88,10 +90,9 @@ switch($step){
               <div>
                 <div id="crumbs">
                   <ul class="col-sm-12">
-                    <li class="col-sm-3"><a href="index.php?step=1" <?php if($step==1){ ?>class="active" <?php } ?>>Chuyến đi và tính phí</a></li>
-                    <li class="col-sm-3"><a href="index.php?step=2" <?php if($step==2){ ?>class="active" <?php } ?>>Thông tin người bảo hiểm</a></li>
-                    <li class="col-sm-3"><a href="index.php?step=3" <?php if($step==3){ ?>class="active" <?php } ?>>Đăng nhập hệ thống</a></li>
-                    <li class="col-sm-3"><a href="index.php?step=4" <?php if($step==4){ ?>class="active" <?php } ?>>Xác nhận và thanh toán</a></li>
+                    <li class="col-sm-4"><a href="index.php?step=1" <?php if($step==1){ ?>class="active" <?php } ?>>lựa chọn gói bảo hiểm</a></li>
+                    <li class="col-sm-4"><a href="index.php?step=2" <?php if($step==2){ ?>class="active" <?php } ?>>Nhập thông tin khách mua bảo hiểm</a></li>                    
+                    <li class="col-sm-4"><a href="index.php?step=3" <?php if($step==3){ ?>class="active" <?php } ?>>Xác nhận - thanh toán</a></li>
                     
                   </ul>
                 </div>             
@@ -99,7 +100,12 @@ switch($step){
                 <!-- Tab panes -->
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="step1">
+                    <?php                     
+                    if($is_login == true && $step == 3) { ?>
+                    <?php include "blocks/step4.php"; ?>
+                    <?php }else{ ?>
                       <?php include "blocks/step".$step.".php"; ?>
+                      <?php } ?>
                       
                   </div>                  
                 </div>
@@ -141,7 +147,7 @@ switch($step){
     <div class="sign-up-newsletter_box col-sm-12">
 
       <div class="col-md-7">
-      <div class="sign-up-tt" style="text-align: justify; width: 300px; float: left;"><span class="txt-dang-ky-mail" style="font-size: 16px;">Đăng ký nhận bản tin khuyến mãi</span>
+      <div class="sign-up-tt" style="text-align: justify; width: 300px; float: left;"><span class="txt-dang-ky-mail" style="font-size: 18px;">Đăng ký nhận bản tin khuyến mãi</span>
       <span style="font-size: 11px;">Nhận các ưu đãi tuyệt vời trong hộp thư đến của bạn!</span></div>
       <div style="width: 300px; float: right;">
 
@@ -150,7 +156,9 @@ switch($step){
 
       <div class="es_msg"></div>
 
-      <input id="es_txt_name_pg" class="es_textbox_class" style="display: none;" maxlength="225" name="es_txt_name_pg" type="text" value=""> <input id="es_txt_email_pg" class="es_textbox_class" maxlength="225" name="es_txt_email_pg" type="text" value=""> <input id="es_txt_button_pg" class="es_textbox_button" name="es_txt_button_pg" type="button" value="Đăng ký"> <input id="es_txt_group_pg" name="es_txt_group_pg" type="hidden" value="Public">
+      <input id="es_txt_name_pg" class="es_textbox_class" style="display: none;" maxlength="225" name="es_txt_name_pg" type="text" value=""> 
+      <input id="es_txt_email_pg" class="es_textbox_class" maxlength="225" name="es_txt_email_pg" type="text" value=""> <input id="es_txt_button_pg" class="es_textbox_button" name="es_txt_button_pg" type="button" value="Đăng ký"> 
+      <input id="es_txt_group_pg" name="es_txt_group_pg" type="hidden" value="Public">
       </div>
 
       </div>
@@ -160,8 +168,8 @@ switch($step){
       <span class="txt-cong-dong" style="font-size: 14px;">Cộng đồng</span>
       <ul>
         <li style="padding-top: 15px;">
-      <!--<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Facebook Cross Domain Communication Frame" aria-hidden="true" tabindex="-1" id="fb_xdm_frame_http" src="http://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2c14cdfb&amp;origin=http%3A%2F%2Fbaohiem.dev" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Facebook Cross Domain Communication Frame" aria-hidden="true" tabindex="-1" id="fb_xdm_frame_https" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2c14cdfb&amp;origin=http%3A%2F%2Fglobalink.vn" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>-->
-      <script>// <![CDATA[
+      <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Facebook Cross Domain Communication Frame" aria-hidden="true" tabindex="-1" id="fb_xdm_frame_http" src="http://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2c14cdfb&amp;origin=http%3A%2F%2Fbaohiem.dev" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Facebook Cross Domain Communication Frame" aria-hidden="true" tabindex="-1" id="fb_xdm_frame_https" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2c14cdfb&amp;origin=http%3A%2F%2Fglobalink.vn" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>-->
+      <script> <![CDATA[
       (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -169,16 +177,16 @@ switch($step){
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-      // ]]&gt;</script>
-      <!--<div class="fb-like fb_iframe_widget" style="overflow: hidden;" data-href="https://www.facebook.com/Globalink-Travel-1514350022209151/" data-layout="button_count" data-action="like" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2FGlobalink-Travel-1514350022209151%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true"><span style="vertical-align: bottom; width: 130px; height: 20px;"><iframe name="f18f817104" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.5/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df2161c4dac%26domain%3Dglobalink.vn%26origin%3Dhttp%253A%252F%252Fglobalink.vn%252Ff2c14cdfb%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2FGlobalink-Travel-1514350022209151%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true" style="border: none; visibility: visible; width: 130px; height: 20px;" class=""></iframe></span></div></li>
+       ]]&gt;</script>
+      <div class="fb-like fb_iframe_widget" style="overflow: hidden;" data-href="https://www.facebook.com/Globalink-Travel-1514350022209151/" data-layout="button_count" data-action="like" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2FGlobalink-Travel-1514350022209151%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true"><span style="vertical-align: bottom; width: 130px; height: 20px;"><iframe name="f18f817104" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.5/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df2161c4dac%26domain%3Dglobalink.vn%26origin%3Dhttp%253A%252F%252Fglobalink.vn%252Ff2c14cdfb%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2FGlobalink-Travel-1514350022209151%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true" style="border: none; visibility: visible; width: 130px; height: 20px;" class=""></iframe></span></div></li>
         <li><a class="icon-fb" title="" href="https://www.facebook.com/Globalink-Travel-1514350022209151/" target="_blank">Facebook</a></li>
         <li><a class="icon-tt" title="">Twitter</a></li>
         <li><a class="icon-gg" title="">Google Plus</a></li>
       </ul>
-      </div>-->
+      </div>
       </div>
 </div>
-
+<div style="clear:both"></div>
 <div class="adv_box">
 
 <div class="col-md-3">
@@ -208,8 +216,10 @@ switch($step){
 </div>
 <div class="col-md-6"><img style="border: 3px solid #ddd;" src="img/maps.png" alt="center-box"></div>
 <div class="col-md-3"><img src="img/right-box.png" alt="right-box"></div>
+<div style="clear:both"></div>
 
 </div>
+
 
 <div class="footer_box clearfix" style="margin-top:20px">
 <div class="wrap-cnt">
@@ -377,6 +387,14 @@ switch($step){
         defaultDate: '01/01/1980'
     });   
   });
+  $(document).ready(function(){
+  $('#btnCK').click(function(){
+    $('#content_ck').slideToggle();
+  });
+  $('#btnTM').click(function(){
+    $('#content_tienmat').slideToggle();
+  });
+});
   </script>
   </body>
 </html>

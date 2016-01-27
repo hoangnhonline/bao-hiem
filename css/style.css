@@ -1,3 +1,17 @@
+/*------------------------------------------------------------------------------------------
+1. GENERAL COMPONENTS
+------------------------------------------------------------------------------------------*/
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+
+html {display:table; width:100%;}
+body { position:relative; background: #fff; font-family: 'Open Sans', sans-serif; font-size:14px;}
+img {max-width:100%;}
+.error {
+  color:#f00;
+}
 /*-----------------------------------------------------------------------*/
 /* HEADER - MENU BASE */
 #header #menu-base {}
@@ -216,6 +230,7 @@ label{
     font-size: 14px;
     margin: 5px 0 0 0;
     float: right;
+    line-height: 40px;
   }
   .sign-up-newsletter_box .aign-up-mail input[type=text]:focus {
     outline:none;
@@ -290,11 +305,12 @@ width: 268px;
     text-align: left;
   }
   .adv_box .adv_left_box ul li {
-    padding: 0 0 10px 45px;
+    padding: 0 0 10px 40px;
     position: relative;
     color: #48a7bc;
     font-size: 11px;
     margin-bottom: 5px;
+    margin-left: -40px;
     list-style: none;
   }
   .adv_box .adv_left_box ul li:before {
@@ -346,6 +362,7 @@ display: inline-table;
 #crumbs ul li {
   display: inline;
   padding: 2px;
+  padding-left: 10px;
 }
 .cnt-visa-passport {
   background: url(../img/visa-passport.jpg) no-repeat bottom right;
@@ -390,6 +407,7 @@ display: inline-table;
   text-decoration: none;
   color: #fff;
       width: 100%;
+      padding-left: 15px
 }
   #crumbs ul li a:after {
     content: "";  
@@ -596,7 +614,7 @@ div.title {
 .ico_idr {background-position:-30px -870px;}
 .ico_sgd {background-position:-60px -870px;}
 .ico_thb {background-position:-90px -870px;}
-#cach-thuc-mua li{list-style: none;margin-bottom: 10px}
+#cach-thuc-mua li{margin-bottom: 10px;}
 #cach-thuc-mua {clear: both}
 label.error{color:red; font-style: italic;}
 td.value{
@@ -615,4 +633,651 @@ label.required{color:red; font-style: italic;}
 #btnXemphi{
   background-color: #008081 !important;
   width: 175px;
+}
+#crumbs {
+  text-transform: uppercase;
+}
+/*============================================================================================*/
+/* 4. WIZARD 4: PAYMENT INFO */
+/*============================================================================================*/
+
+#fpayment-method {
+    float: left;
+    /*width: inherit;*/
+    padding: 0;
+}
+
+.customer-payment p {
+    font-weight: bolder;
+}
+
+.customer-payment strong {
+    color: #333 !important;
+    line-height: 24px;
+}
+
+#tblPaymentInfo {
+    border: solid 1px #efefef;
+}
+
+    #tblPaymentInfo tr {
+        border-bottom: solid 1px #efefef;
+    }
+
+        #tblPaymentInfo tr td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            vertical-align: middle;
+            padding-right: 10px;
+        }
+
+            #tblPaymentInfo tr td span strong {
+                line-height: 25px;
+            }
+
+.rowpayment table tr td {
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+.rowpayment table tr:last-child {
+    border-bottom: 0;
+}
+
+.methods-header {
+    position: relative;
+}
+
+    .methods-header label {
+        padding: 10px;
+        padding-left: 40px;
+        display: block;
+    }
+
+        .methods-header label br {
+            display: none;
+            visibility: hidden;
+        }
+
+    .methods-header input[type="radio"] {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    .methods-header h3 {
+        padding-bottom: 5px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+        .methods-header h3 strong {
+            color: #15697f;
+        }
+
+    .methods-header label {
+        color: #999;
+        background: #F1F5F8;
+    }
+
+.payment h2 {
+    margin: 0px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.methods h3 {
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.methods p {
+    margin: 0px;
+}
+
+.tb_method {
+    width: 100%;
+}
+
+table.payment-at-home tr {
+    background: #fff;
+}
+
+    table.payment-at-home tr td {
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+
+        table.payment-at-home tr td.header strong {
+            display: block;
+            padding-bottom: 5px;
+            padding-left: 40px;
+        }
+
+        table.payment-at-home tr td input {
+            width: 290px;
+            padding: 3px 5px;
+        }
+
+#payment1-info, #payment2-info, #payment4-info {
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+#payment3-info {
+    padding-left: 10px;
+}
+
+    #payment3-info tr {
+        border-bottom: 0;
+    }
+
+#content_transfer {
+    background: #f8ebd9;
+    border: solid 1px #f3b55b;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#billInfo {
+    color: #2d1b45;
+    padding: 10px 15px;
+}
+
+#billdetail fieldset {
+    border: 1px solid #dae8f4;
+    padding: 10px;
+    margin-top: 10px; /*width:650px !important;*/
+}
+
+    #billdetail fieldset legend {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #15697F;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+#billdetail table.bill-info {
+    width: 100%;
+}
+
+    #billdetail table.bill-info td {
+        padding: 3px 5px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+    }
+
+        #billdetail table.bill-info td input[type=text] {
+            padding: 7px 5px;
+            width: 93% !important;
+            border: solid 1px #ccc;
+            box-shadow: none;
+            margin-bottom: 10px;
+        }
+
+            #billdetail table.bill-info td input[type=text]#billAddress {
+                width: 98% !important;
+            }
+
+        #billdetail table.bill-info td span.flytrip-note {
+            color: #f00;
+        }
+
+#booking-agreement {
+}
+
+    #booking-agreement a {
+        color: #df1784;
+        text-decoration: underline;
+    }
+
+#btnContinue {
+    margin-bottom: 10px;
+}
+
+/*============================================================================================*/
+/* 5. WIZARD 5: BOOKING CONFIRM */
+/*============================================================================================*/
+
+.confirm-payment .confirm_title,
+.confirm-payment .confirm_title span {
+    padding: 0;
+    background: none;
+    font-family: Arial;
+    color: #FE5815;
+    border-bottom: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.confirm-payment a, .confirm-payment a:link, .confirm-payment a:visited {
+    color: #ed1c24;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.confirm-panel .confirm-title {
+    background: #E9E9E9;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    display: none;
+    visibility: hidden;
+}
+
+    .confirm-panel .confirm-title span {
+        background: none;
+    }
+
+.confirm-panel .cpl-total {
+    font-size: 20px;
+}
+
+#cpl-customer-info {
+    display: none;
+    visibility: hidden;
+}
+
+.confirm-panel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .confirm-panel ul li {
+    }
+
+        .confirm-panel ul li .cpnl-label {
+            display: inline-block;
+            width: 160px;
+        }
+
+            .confirm-panel ul li .cpnl-label span {
+                display: inline-block;
+                min-width: 30px;
+            }
+
+        .confirm-panel ul li .cpnl-value {
+            font-weight: bold;
+        }
+
+            .confirm-panel ul li .cpnl-value.bookingcode {
+                color: #0863bc;
+                font-size: 16px;
+            }
+
+.confirm-flight-booking-info .cpnl-value.bookingcode {
+    color: #0863bc;
+}
+
+.confirm-flight-booking-info .cpnl-value.bookingcode {
+    color: #0863bc;
+}
+
+.confirm-panel p {
+    margin: 0;
+}
+
+.cpnl-thankyou {
+    color: #FE5815;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.cpl-payment {
+    font-size: 13px;
+}
+
+.confirm-panel h4.go-icon {
+    background-position: 5px 5px;
+    margin-bottom: 10px;
+}
+
+.confirm-panel h4.back-icon {
+    background-position: 5px -27px;
+    margin-bottom: 10px;
+}
+
+.cpl-route-info {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+    .cpl-route-info .info {
+        font-size: 14px;
+    }
+
+    .cpl-route-info.cpl-air-brand {
+        float: right;
+        margin-top: -31px;
+        padding-right: 20px;
+    }
+
+        .cpl-route-info.cpl-air-brand .info {
+            font-size: 20px;
+        }
+
+.confirm-panel.customer-payment ul li {
+    font-size: 14px;
+    font-weight: bold;
+    color: #575468;
+}
+
+.confirm_info {
+    display: inline-block;
+    visibility: visible;
+}
+
+.confirm_info {
+    padding: 15px;
+    margin-top: 25px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    background: #F5F5F5;
+}
+
+    .confirm_info p {
+        padding: 0;
+        margin: 0;
+    }
+
+    .confirm_info .hotline_confirm {
+        padding: 5px 0px;
+        display: inline-block;
+        color: #FE5815;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .confirm_info ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+
+        .confirm_info ul li {
+            margin: 4px 0px;
+            padding-left: 15px;
+            background: url(../images/gray-arrow.png) left center no-repeat;
+        }
+
+            .confirm_info ul li a {
+                color: #333;
+                text-decoration: underline;
+            }
+
+                .confirm_info ul li a:hover {
+                    color: #FE5815;
+                }
+
+.confirm-panel .highlight,
+.confirm-payment .highlight {
+    color: #de1683;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.confirm-payment.lmod p {
+    margin: 0;
+}
+
+.confirm-panel #btnOnlinePayment span {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.confirm-panel .confirm-flight-booking-info li {
+    padding-bottom: 5px;
+}
+
+.confirm-payment .additional h4 {
+    background: none;
+    border-bottom: dashed 1px #959595;
+    padding-left: 0px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: #222;
+    margin-top: 15px;
+}
+
+.confirm-panel.cf.lmod ul li .cpnl-value {
+    color: #15697F;
+}
+
+.font-normal {
+    color: #222 !important;
+}
+/*============================================================================================*/
+/* 2. ASIDE: TICKET SUMMARY */
+/*============================================================================================*/
+#sticker {
+    width: 280px;
+}
+
+.stick {
+    position: fixed;
+    top: 0px;
+}
+/* back to previous stage */
+.backbtn {
+    width: 230px;
+    display: none;
+    visibility: hidden;
+}
+
+#bookingSummary {
+    border-radius: 0;
+}
+
+aside {
+    float: right;
+    width: 240px;
+    padding: 0;
+}
+
+    aside h2.title {
+    }
+
+    aside .filters {
+        margin: 5px 10px;
+    }
+
+    aside h3 {
+        font-size: 12px;
+        margin: 10px 20px 10px 0;
+    }
+
+        aside h3 span {
+            float: right;
+            font-weight: normal;
+        }
+
+    aside .filter {
+        width: 100%;
+        background: url(../images/sliderbg.png) 50% 50% no-repeat;
+        width: 206px;
+        height: 51px;
+        border: none;
+        padding: 0 11px;
+    }
+
+    aside .slider, aside .ui-slider-range {
+        background: none;
+        border: none;
+    }
+
+    aside .filter .min {
+        float: left;
+    }
+
+    aside .filter .max {
+        float: right;
+    }
+
+    aside .filter .min,
+    aside .filter .max {
+        margin: 4px 0;
+    }
+
+    aside .ui-slider .ui-slider-handle {
+        border: none;
+        background: #15697f;
+        width: 10px;
+        height: 10px;
+        border-radius: 6px;
+        top: -4px;
+        margin-left: 0;
+    }
+
+    aside .sidebar-top {
+        padding: 0 10px 0 10px;
+        position: relative;
+        background: #fff;
+        margin-bottom: 10px;
+        padding-bottom: 0;
+        border: 1px solid #DAE8F4;
+    }
+
+    aside .subtitle {
+        padding-bottom: 3px;
+        margin-top: 0;
+        font-weight: bold;
+        margin-left: -10px;
+        font-size: 16px;
+        color: #15697F;
+        background: #F1F5F8;
+        margin-right: -10px;
+        border-bottom: 1px solid #DAE8F4;
+        padding-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    aside .totalholder {
+        padding: 0px;
+        background: none;
+    }
+
+        aside .totalholder strong {
+        }
+
+    aside .totalprice {
+        color: #2d1b45;
+        padding: 0px;
+        line-height: 25px;
+        border-bottom: 0;
+        background: none;
+    }
+
+        aside .totalprice > br {
+            display: none;
+            visibility: hidden;
+            line-height: 0;
+        }
+
+        aside .totalprice h3 {
+            border-top: none;
+            padding: 10px 0 5px 0 !important;
+        }
+
+    aside .holder {
+        color: #2d1b45;
+    }
+
+    aside .holder-sep {
+        border-bottom: 1px dashed #DAE8F4;
+        margin: 10px 0px;
+    }
+
+    aside .text {
+        float: left;
+    }
+
+    aside .value {
+        float: right;
+    }
+
+    aside .totaltitle {
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #15697F;
+        padding: 15px 0 !important;
+    }
+
+        aside .totaltitle:hover {
+            color: #222;
+        }
+
+        aside .totaltitle.inactive {
+            background: url(../images/totaltitlein.png) 100% 50% no-repeat;
+        }
+
+    aside .subtotal {
+        text-align: left;
+        border-top: 1px dashed #DAE8F4;
+        margin-top: 10px;
+        padding-top: 15px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+        aside .subtotal strong {
+            font-size: 16px;
+            margin-top: 0px;
+            color: #333;
+            text-align: right;
+            display: block;
+        }
+
+    aside .totalholder strong.text-right {
+        float: right;
+    }
+
+    aside .total {
+        line-height: normal;
+        text-align: left;
+        background: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ee1b24;
+        margin-left: -11px;
+        margin-right: -11px;
+        margin-top: 10px;
+    }
+
+        aside .total strong {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        aside .total .cont {
+            padding: 10px 15px;
+            color: #fff;
+            background: #15697F;
+            white-space: nowrap;
+            text-align: center;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+.calcuprice {
+}
+
+    .calcuprice .value {
+        font-weight: bold;
+    }
+
+#sm-departure1, #sm-return1, #sm-departure2, #sm-return2 {
+    display: none;
+    visibility: hidden;
 }

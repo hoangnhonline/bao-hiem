@@ -7,7 +7,7 @@ class Home {
 
     function __construct() {
         if($_SERVER['SERVER_NAME']=='baohiem.dev'){
-            mysql_connect('localhost', 'root', '') or die("Can't connect to server");
+            mysql_connect('localhost', 'root', 'root') or die("Can't connect to server");
                mysql_select_db('baohiem') or die("Can't connect database");
         }else{
 			mysql_connect('mysql.onehost.vn', 'thietken_baohiem', 'baohiem!@#') or die("Can't connect to server");

@@ -156,4 +156,4 @@ if(isset($_SESSION['step1'])){
 		</td>
 	</tr>
 
-</tab>
+</table>

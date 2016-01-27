@@ -48,6 +48,7 @@
                   </label>
                 </div>
                 <button class="btn" id="btnDK" style="display:none;background-color:#ff6400;color:#FFF;float:right">Đăng ký tài khoản</button>
+                <button class="btn" id="btnVL" style="display:none;background-color:#ff6400;color:#FFF;float:right">Nhập thông tin</button>
               </div>
             </div>
           </div>
@@ -69,11 +70,11 @@
                 </div>
                 <div class="form-group">
                   <label for="password">Mật khẩu <label class="required">*</label></label>
-                  <input class="form-control" name="password" maxlength="20" id="password"  aria-required="true" required="required" >
+                  <input type="password" class="form-control" name="password" maxlength="20" id="password"  aria-required="true" required="required" >
                 </div>
                 <div class="form-group">
                   <label for="password">Xác nhận mật khẩu <label class="required">*</label></label>
-                  <input class="form-control" name="re_password" maxlength="20" id="re_password"  aria-required="true" required="required" >
+                  <input type="password"  class="form-control" name="re_password" maxlength="20" id="re_password"  aria-required="true" required="required" >
                 </div>
                  <div class="form-group">
                   <label for="password">Họ và tên <label class="required">*</label></label>
@@ -116,9 +117,60 @@
         </div>
       </form>
         </div>
+        <div id="vanglai" style="display:none">
+          <form id="formVL" name="formVL" method="POST" action="process/vanglai.php">
+          <div class="col-sm-8">
+          <div class="panel panel-default">
+            <div class="panel-heading" style="background-color:#f7f7f9;color:#000">
+              <h3 class="panel-title">Thông tin khách hàng</h3>
+            </div>
+            <div class="panel-body">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="username">Email <label class="required">*</label></label>
+                  <input class="form-control" name="email" id="email" aria-required="true" required="required" >
+                </div>               
+                 <div class="form-group">
+                  <label for="password">Họ và tên <label class="required">*</label></label>
+                  <input class="form-control" name="fullname" id="fullname"  aria-required="true" required="required" >
+                </div>
+                <div class="form-group">
+                  <label for="password">Điện thoại <label class="required">*</label></label>
+                  <input class="form-control" maxlength="20" name="phone" id="phone"  aria-required="true" required="required" >
+                </div>
+                <div class="form-group">
+                  <label for="password">Địa chỉ <label class="required">*</label></label>
+                  <input class="form-control" name="address" id="address"  aria-required="true" required="required" >
+                </div>
+                 <div class="form-group">
+                  <label for="password">Ngày sinh</label>
+                  <input class="form-control birthday" name="birthday" id="birthday" >
+                </div>
+                <div class="form-group">
+                  <label for="password">CMND</label>
+                  <input class="form-control" name="cmnd" id="cmnd"  >
+                </div>            
+                <div class="form-group">
+                  <label for="password">Công ty</label>
+                  <input class="form-control" name="company_name" id="company_name"  >
+                </div>
+                <div class="form-group">
+                  <label for="password">Địa chỉ công ty</label>
+                  <input class="form-control" name="company_address" id="company_address"  >
+                </div>
+                <div class="form-group">
+                  <label for="password">MST</label>
+                  <input class="form-control" name="tax_no" id="tax_no"  maxlength="20">
+                </div>
+                <button class="btn" style="background-color:#ff6400;color:#FFF;marign-right:5px">Tiếp tục thanh toán</button>
+                 <button class="btn btn-default" type="button"  id="btnHuyVangLai">Hủy bỏ</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </form>
+        </div>
       </div>
     </div>  
 </div><!--col-md-12-->
-<style>
-
-</style>
