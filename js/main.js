@@ -35,6 +35,31 @@ $(document).ready(function(){
       }
   
     });
+    $("#formVL").validate({
+
+      rules: {
+        email: {
+          required: true,
+          email: true
+        },
+        phone: {          
+          number : true
+        }            
+      }
+  
+    });
+    $('#formVL').ajaxForm({
+        beforeSend: function() {                
+        },
+        uploadProgress: function(event, position, total, percentComplete) {
+                   
+        },
+        dataType : 'html',
+        complete: function(data) {  
+         location.href='index.php?step=3'; 
+      
+        }
+    });
   $('#formDK').ajaxForm({
         beforeSend: function() {                
         },
@@ -43,7 +68,7 @@ $(document).ready(function(){
         },
         dataType : 'html',
         complete: function(data) {  
-	location.href='index.php?step=4'; 
+	       location.href='index.php?step=3'; 
       
         }
     }); 
@@ -162,17 +187,27 @@ $(document).ready(function(){
     var value = $(this).val();
     if(value==1){
       $('#btnDK').show();
+      $('#btnVL').hide();
     }else{
+      $('#btnVL').show();
       $('#email_vl').show();
       $('#btnDK').hide();
     } 
   });
   $('#btnDK').click(function(){
-    $('#dangnhap').hide();
+    $('#dangnhap, #vanglai').hide();
     $('#dangky').show();
+  });
+  $('#btnVL').click(function(){
+    $('#dangnhap, #dangky').hide();
+    $('#vanglai').show();
   });
   $('#btnHuyDK').click(function(){
     $('#dangnhap').show();
-    $('#dangky').hide();
+    $('#dangky, #vanglai').hide();
+  });
+  $('#btnHuyVangLai').click(function(){
+    $('#dangnhap').show();
+    $('#dangky, #vanglai').hide();
   });
 });
